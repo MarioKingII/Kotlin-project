@@ -12,16 +12,16 @@ fun main() {
         try {
             input = readln().toInt()
         } catch (e: Exception) {
-            println("Please Enter a Number")
+            println("Please Enter a valid selection")
             continue
         }
         when (input) {
-            1 -> haddItem(user)
+            1 -> addingItem(user)
             2 -> deleteItem(user)
             3 -> displayList(user)
             4 -> user.totalToSpend()
             5 -> {
-                println("Thank you ${user.name} for using the app!")
+                println("Thank you ${user.name}")
                 exitProcess(0)
             }
 
@@ -54,7 +54,7 @@ fun Menu() {
     println("5: Exit")
 }
 
-fun haddItem(user : User) {
+fun addingItem(user : User) {
     print("Enter the product's name: ")
     val item = readln()
     print("Enter price: ")
@@ -68,8 +68,6 @@ fun deleteItem(user : User) {
     val itemPrice = readln().toInt()
     user.delete_Item(item, itemPrice)
 }
-
-
 
 fun displayList( user: User){
     val addedItems = user.list_Items

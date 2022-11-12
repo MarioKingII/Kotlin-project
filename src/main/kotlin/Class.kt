@@ -1,6 +1,4 @@
 
-
-
 class User(private val _name: String, private val _budget: Int) {
     var name: String = _name
     var budget: Int = _budget
