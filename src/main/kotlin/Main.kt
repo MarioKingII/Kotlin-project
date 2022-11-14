@@ -30,7 +30,7 @@ fun main() {
     }
 }
 
-
+// gets the username and the desired budget.
 fun getUser(): User {
     print("Enter name: ")
     val name = readln()
@@ -46,14 +46,15 @@ fun getUser(): User {
     return User(name, budget)
 }
 
+// Displays main menu
 fun Menu() {
     println("1: Add a new Item")
-    println("1: Delete a Item")
+    println("2: Delete a Item")
     println("3: Display List")
     println("4: Show Total")
     println("5: Exit")
 }
-
+// Gets input and calls add_Item function in the class.
 fun addingItem(user : User) {
     print("Enter the product's name: ")
     val item = readln()
@@ -61,6 +62,7 @@ fun addingItem(user : User) {
     val itemPrice = readln().toInt()
     user.add_Item(item, itemPrice)
 }
+// Gets input and calls delete_Item function in the class.
 fun deleteItem(user : User) {
     print("Enter the product's name: ")
     val item = readln()
@@ -69,14 +71,19 @@ fun deleteItem(user : User) {
     user.delete_Item(item, itemPrice)
 }
 
+// Displays all items within the map
 fun displayList( user: User){
     val addedItems = user.list_Items
     println("..........................")
     println("Your Shopping list:")
     println()
-    addedItems.forEach{ key, value ->
+    addedItems.forEach{ (key, value) ->
         println("- $value for $key$")
     }
+
+
 }
+
+
 
 
