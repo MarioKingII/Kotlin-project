@@ -2,7 +2,6 @@ import java.lang.Exception
 import kotlin.system.exitProcess
 
 fun main() {
-    // Initiate the user
     val user = getUser()
     // Enter the main program loop to begin accepting input
     while (true) {
@@ -21,7 +20,7 @@ fun main() {
             3 -> displayList(user)
             4 -> user.totalToSpend()
             5 -> {
-                println("Thank you ${user.name}")
+                println("Thanks ${user.name}")
                 exitProcess(0)
             }
 

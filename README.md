@@ -2,7 +2,7 @@
 
 Very simple app meant to be a shopping list for groceries that will help to budget better. New Items can be added or delete. the total of the items in the list can be displayed any time. 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/niWnxngO4EU)
 
 # Development Environment
 
